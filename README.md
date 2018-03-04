@@ -1,7 +1,7 @@
 
 # Java Web Services: Message Board Application
 
-This project consists of a Java Message Board Application. It comprises of two services, i.e., the createMessage service for creation of messages (JAX-WS - SOAP protocol) and the listMessages for listing all messages persisted in the application (JAX-RS - REST protocol). The listMessages has versioning implemented to show different views based on HTTP Request type. The application is just a basic version and can be worked upon even further in the future.
+This project consists of a Java Message Board Application. It comprises of two services, i.e., the createMessage service for creation of messages (JAX-WS - SOAP protocol) and the listMessages for listing all messages persisted in the application (JAX-RS - REST protocol). The listMessages has versioning implemented to show different views based on HTTP Request type.
 
 ## 1. Getting Started
 
