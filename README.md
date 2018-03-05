@@ -1,4 +1,3 @@
-
 # Java Web Services: Message Board Application
 
 This project consists of a Java Message Board Application. It comprises of two services, i.e., the createMessage service for creation of messages (JAX-WS - SOAP protocol) and the listMessages for listing all messages persisted in the application (JAX-RS - REST protocol). The listMessages has versioning implemented to show different views based on HTTP Request type.
@@ -22,22 +21,22 @@ The following instructions and commands will be helpful in development and testi
 2. To view messages, enter the URL as:  <i>http://localhost:8080/MessageBoardApp/message</i>
    
    - Setting the HTTP Request Headers:
-
-	-> Request Type: GET
-	-> Accept: application/v1+json
-    -> Content-Type: application/v1+json
+   
+     - Request Type: <b>GET</b>  
+     - Accept: <b>application/v1+json</b>
+     - Content-Type: <b>application/v1+json</b>
      
-        Shows the messages without URL field (version 1 of listMessages) in JSON format
+     <i>Shows the messages without URL field (version 1 of listMessages) in JSON format</i>
 
-	-> Accept: application/v2+json
-        -> Content-Type: application/v2+json
+     - Accept: <b>application/v2+json</b>
+     - Content-Type: <b>application/v2+json</b>
      
-        Shows the messages with URL field (version 2 of listMessages) in JSON format
+     <i>Shows the messages with URL field (version 2 of listMessages) in JSON format</i>
 
-	-> Accept: application/v2+xml
-        -> Content-Type: application/v2+xml
+     - Accept: <b>application/v2+xml</b>
+     - Content-Type: <b>application/v2+xml</b>
      
-        Shows the messages without URL field (version 2 of listMessages) in XML format
+     <i>Shows the messages without URL field (version 2 of listMessages) in XML format</i>
 
 3. For the createMessage service, a new message can be added as follows:
 
@@ -45,11 +44,11 @@ The following instructions and commands will be helpful in development and testi
 
    - Set HTTP Request headers as follows:
 
-        -> Request Type: POST
-        -> Content-Type: text/xml
+     - Request Type: <b>POST</b>
+     - Content-Type: <b>text/xml</b>
 
    - Enter the following content in the Body of the request:
-
+        ```xml
         <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
     		<Body>
         		<setMessage xmlns="http://fsecure123.abdkh93.com/">
@@ -60,31 +59,11 @@ The following instructions and commands will be helpful in development and testi
         		</setMessage>
     		</Body>
 	</Envelope>
- 
-	    Response is shown in xml with a message Signalling whether message has been 
-	    added or has failed.
+	
+	<i>Response is shown in XML with a message Signalling whether message has been added or not.</i>
 
 ## 4. Assumptions
 
-1. The tomcat plugin for maven has not been configured as it is assumed that the WAR file will be run by copying it. Otherwise the plugin can be specified in the POM.xml file and the server can be initiated via the following command:
+1. The tomcat plugin for maven has not been configured as it is assumed that the WAR file will be run by copying it. Otherwise the plugin can be specified in the <b><i>pom.xml</i></b> file and the server can be initiated via the following command:
 
-   <b>mvn tomcat:deploy</b>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   <b>mvn tomcat:deploy</b>
